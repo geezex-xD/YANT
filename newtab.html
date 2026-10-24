@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>New Tab</title>
+  <link rel="icon" href="icons/icon48.png">
+  <link rel="stylesheet" href="css/newtab.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mortezaom/google-sans-cdn@master/fonts.css" />
+</head>
+<body>
+  <div id="bg" aria-hidden="true"></div>
+
+  <!-- Top-right links, apps launcher and account -->
+  <nav class="top-bar" aria-label="Google services">
+    <a class="top-link on-bg" href="https://mail.google.com/">Gmail</a>
+    <a class="top-link on-bg" href="https://www.google.com/imghp">Images</a>
+    <button id="apps-btn" class="apps-btn on-bg" type="button" aria-label="Google apps" aria-haspopup="menu" aria-expanded="false" data-icon="apps" data-size="24"></button>
+    <button id="avatar-btn" class="avatar-btn" type="button" aria-label="Google Account" aria-haspopup="menu" aria-expanded="false"></button>
+  </nav>
+
+  <main class="stage">
+    <h1 id="logo" class="logo on-bg">Google</h1>
+
+    <form id="search-form" class="searchbox" role="search" autocomplete="off">
+      <button id="plus-btn" class="sb-icon sb-plus" type="button" aria-label="Focus search" data-icon="add" data-size="24"></button>
+      <input id="q" class="sb-input" type="text" name="q" spellcheck="false" autocomplete="off" placeholder="Ask Google" aria-label="Ask Google">
+      <button id="mic-btn" class="sb-icon" type="button" aria-label="Search by voice" data-icon="mic" data-size="24"></button>
+      <button id="lens-btn" class="sb-icon" type="button" aria-label="Search by image" data-icon="camera" data-size="24"></button>
+      <button id="engine-btn" class="engine-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose search engine">
+        <span id="engine-fav" class="engine-fav"></span>
+        <span id="engine-label" class="engine-label">Google</span>
+        <span class="engine-chevron" data-icon="expand" data-size="14"></span>
+      </button>
+    </form>
+
+    <ul id="shortcuts" class="shortcuts" aria-label="Shortcuts"></ul>
+  </main>
+
+  <button id="customize-btn" class="fab" type="button" aria-label="Customize homepage" title="Customize homepage" data-icon="edit" data-size="18"></button>
+
+  <!-- Popup menus -->
+  <div id="apps-menu" class="menu apps-menu" role="menu" aria-label="Google apps" hidden></div>
+
+  <div id="account-menu" class="menu account-menu" role="menu" aria-label="Google Account" hidden>
+    <div class="account-head">
+      <span id="account-avatar" class="avatar-lg"></span>
+      <div class="account-text">
+        <strong>Google Account</strong>
+        <span>Settings and privacy</span>
+      </div>
+    </div>
+    <a class="menu-item" role="menuitem" href="https://myaccount.google.com/">
+      <span data-icon="account" data-size="24"></span>
+      <span>Manage your Google Account</span>
+    </a>
+  </div>
+
+  <div id="engine-menu" class="menu engine-menu" role="menu" aria-label="Search engine" hidden></div>
+
+  <div id="tile-menu" class="menu" role="menu" aria-label="Shortcut options" hidden>
+    <button id="tile-edit" class="menu-item" role="menuitem" type="button"><span data-icon="edit" data-size="20"></span><span>Edit shortcut</span></button>
+    <button id="tile-remove" class="menu-item" role="menuitem" type="button"><span data-icon="delete" data-size="20"></span><span>Remove</span></button>
+  </div>
+
+  <!-- Customize sidebar -->
+  <aside id="sidebar" class="sidebar" aria-label="Customize homepage" inert>
+    <header class="sb-head">
+      <h2>Customize homepage</h2>
+      <button id="sb-close" class="icon-btn" type="button" aria-label="Close" data-icon="close" data-size="24"></button>
+    </header>
+
+    <div class="sb-body">
+      <section>
+        <h3>Background</h3>
+        <div id="bg-tabs" class="segmented" role="tablist" aria-label="Background type">
+          <button type="button" role="tab" data-tab="solid">Color</button>
+          <button type="button" role="tab" data-tab="gradient">Gradient</button>
+          <button type="button" role="tab" data-tab="image">Image</button>
+        </div>
+
+        <div class="panel" data-panel="solid">
+          <div id="solid-swatches" class="swatches"></div>
+        </div>
+
+        <div class="panel" data-panel="gradient">
+          <div id="grad-swatches" class="swatches"></div>
+          <div class="grad-controls">
+            <label class="color-field"><span>Start</span><input id="grad-c1" type="color"></label>
+            <label class="color-field"><span>End</span><input id="grad-c2" type="color"></label>
+            <label class="range-field"><span>Angle</span><input id="grad-angle" type="range" min="0" max="360" step="5"></label>
+          </div>
+        </div>
+
+        <div class="panel" data-panel="image">
+          <label id="dropzone" class="dropzone" tabindex="0">
+            <input id="bg-file" type="file" hidden accept="image/png,image/jpeg,image/gif,image/webp,image/avif,image/bmp,image/svg+xml,image/apng,.png,.jpg,.jpeg,.gif,.webp,.avif,.bmp,.svg,.apng">
+            <span data-icon="upload" data-size="28"></span>
+            <strong>Upload an image</strong>
+            <small>or drop one here. PNG, JPEG, GIF, WebP, AVIF, BMP, SVG</small>
+          </label>
+          <div id="image-current" class="image-current" hidden>
+            <div id="image-thumb" class="thumb"></div>
+            <div class="image-actions">
+              <button id="image-replace" class="btn-tonal" type="button">Replace</button>
+              <button id="image-remove" class="btn-text" type="button">Remove</button>
+            </div>
+          </div>
+          <div id="fit-seg" class="segmented small" hidden aria-label="Image fit">
+            <button type="button" data-value="cover">Fill</button>
+            <button type="button" data-value="contain">Fit</button>
+            <button type="button" data-value="stretch">Stretch</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Heading and labels</h3>
+        <div id="heading-seg" class="segmented" aria-label="Heading color">
+          <button type="button" data-value="auto">Auto</button>
+          <button type="button" data-value="light">Light</button>
+          <button type="button" data-value="dark">Dark</button>
+        </div>
+      </section>
+
+      <section>
+        <h3>Color theme</h3>
+        <div id="mode-seg" class="segmented" aria-label="Light or dark">
+          <button type="button" data-value="auto">Auto</button>
+          <button type="button" data-value="light">Light</button>
+          <button type="button" data-value="dark">Dark</button>
+        </div>
+        <div id="seed-swatches" class="swatches"></div>
+        <button id="eyedrop" class="btn-tonal with-icon" type="button" hidden><span data-icon="eyedropper" data-size="18"></span>Pick from screen</button>
+        <p class="hint" id="seed-hint">Auto follows Chrome’s light or dark mode and uses the browser’s accent color when it shares one. Chrome doesn’t share its theme color with extensions, so to match it exactly, pick a color or sample your toolbar with the eyedropper once. It’s remembered.</p>
+      </section>
+
+      <section>
+        <h3>Profile picture</h3>
+        <div class="avatar-row">
+          <span id="sb-avatar" class="avatar-lg"></span>
+          <div class="image-actions">
+            <button id="avatar-upload" class="btn-tonal" type="button">Choose photo</button>
+            <button id="avatar-remove" class="btn-text" type="button">Remove</button>
+          </div>
+          <input id="avatar-file" type="file" hidden accept="image/*">
+        </div>
+      </section>
+
+      <button id="reset" class="btn-text danger" type="button">Reset to defaults</button>
+    </div>
+  </aside>
+
+  <!-- Add / edit shortcut -->
+  <dialog id="shortcut-dialog" class="dialog" aria-labelledby="sc-title">
+    <form id="shortcut-form" method="dialog" novalidate>
+      <h2 id="sc-title">Add shortcut</h2>
+      <div class="sc-preview-row">
+        <span id="sc-preview" class="tile-icon"></span>
+        <p>The icon is fetched automatically from the website.</p>
+      </div>
+      <label class="field">
+        <input id="sc-name" type="text" placeholder=" " maxlength="40" autocomplete="off">
+        <span>Name</span>
+      </label>
+      <label class="field">
+        <input id="sc-url" type="text" inputmode="url" placeholder=" " autocomplete="off" spellcheck="false">
+        <span>URL</span>
+      </label>
+      <p id="sc-error" class="field-error" role="alert" hidden></p>
+      <div class="dialog-actions">
+        <button id="sc-cancel" class="btn-text" type="button">Cancel</button>
+        <button id="sc-save" class="btn-filled" type="submit">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

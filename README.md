@@ -1,32 +1,24 @@
-# YANT - Yet Another New Tab
-I like Chrome's default new tab/homepage, but hate that it only works if you have Google as your search engine. So I asked Claude to make a yet another new tab extension. This is basically a copy of Chrome's default homepage with 95% visual and finctional accuracy, but works with all search engines. Feel free to contribute!
+# Material Homepage
 
-# Installation guide ^-^
-I don't have the $5 needed to post it on Chrome Web Store, so this extension comes unpacked. Here is a guide in case you don't know how to install unpacked extensions!
-## Step 1:
-Download the extension from "Releases" page on GitHub
-## Step 2:
-Unzip it. If you're on Windows 11, just select YANT.zip in the explorer and click "Extract all". If you're on Windows 10, select the archive, then click it with the right mouse button, then click "extract All..."
-On MacOS, right-click (or control-click) the .zip file, choose "Open With", then select "Archive Utility".
-On Linux, use File Roller or another archiver.
-Remember where you extracted the archive.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b4fb7c72-07a2-41a1-aabb-2e19977aed8d" />
-## Step 3:
-Open your Google Chrome or another Chromium-based (Edge, Brave, Vivaldi, Opera, Yandex, Arc) browser and type "chrome://extensions/" into the address bar.
-Here, enable the "Developer mode", using the toggle in the upper right corner.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/feb3eb10-d3e7-40b0-8f50-23c68fb6960a" />
-## Step 4:
-Select "Load unpacked" in the upper left corner. A file manager window will pop up. Navigate to the extracted folder. Then click "Select folder"
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2bb32318-0c40-40b4-9fca-573b23f3fcce" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0d37f2a1-dbbf-419f-9ff1-bba684b67e61" />
-Never delete the folder if you don't want the extension to stop working. The original .zip file may be deleted.
-## Step 5: You are irresistible <3!
+A Material You new tab page for Chrome.
 
-# Preview
-<img width="1920" height="1080" alt="{0F0A3987-F26E-4E8E-BDFC-D738E823C6B2}" src="https://github.com/user-attachments/assets/ffeb2daf-515f-480f-8082-90578d0b1742" />
-<img width="1920" height="1080" alt="{D5CD949B-7428-4DCD-9AC3-0C14F7773BD6}" src="https://github.com/user-attachments/assets/fb8c9adb-b5c3-4fc5-9b5d-e28f60e9d274" />
-<img width="1920" height="1080" alt="{1EEFE222-BF07-4A06-930F-B313AECD4ACB}" src="https://github.com/user-attachments/assets/0891b614-f695-4fb8-89a8-700d2d306e96" />
-https://github.com/user-attachments/assets/6cba07ec-3bc6-4df4-94cf-e2412d403d49
+## Install
+1. Open `chrome://extensions` and turn on **Developer mode**.
+2. Click **Load unpacked** and choose this folder (the one containing `manifest.json`).
+3. Open a new tab. Chrome may ask you to keep the change.
 
-### Bottom line
-I'm very poor at coding, don't really know how to use GitHub, and don't have the money for Claude subscription so I only have one request a day. Please don't hate if I did something wrong!
+To use it for the Home button too: Settings → Appearance → Home button → **New Tab page**.
+
+## Using it
+- **Pencil button** (bottom right): background (solid, gradient, or your own image/GIF), heading color,
+  color theme, profile picture. You can also drop an image anywhere on the page.
+- **Search engine pill**: Google, DuckDuckGo, Bing, Yandex. The heading and placeholder follow.
+- **Apps grid**: Google services. **Avatar**: link to your Google Account settings.
+- **Add shortcut**: name + URL; the icon is fetched from the site. Hover a tile for edit/remove.
+
+## Notes
+- Chrome doesn't expose its theme color to extensions. "Auto" follows light/dark mode; to match your theme
+  color, pick it in the sidebar or sample your toolbar with the eyedropper (remembered afterwards).
+- Favicons are requested from Google's favicon service, then DuckDuckGo's, then the site itself.
+- Uploaded images stay on your device (IndexedDB). Nothing is sent anywhere.
+- The "+" button focuses the search field; the camera button opens the selected engine's image search.

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YANT: Yet Another New Tab",
+  "version": "1.0.0",
+  "description": "A customizable new tab page inspired by Chrome and Material You design: custom backgrounds (including GIFs), a search engine selector, Google app launcher, shortcuts and custom colors",
+  "minimum_chrome_version": "111",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["unlimitedStorage"]
+}
