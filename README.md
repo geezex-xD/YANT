@@ -32,4 +32,4 @@ Never delete the folder if you don't want the extension to stop working. The ori
 <video src="https://github.com/user-attachments/assets/6cba07ec-3bc6-4df4-94cf-e2412d403d49" controls width="100%"></video>
 
 ### Bottom line
-I'm very poor at coding, don't really know how to use GitHub, and don't have the money for Claude subscription so I only have one request a day. Pl
+I'm very poor at coding, don't really know how to use GitHub, and don't have the money for Claude subscription so I only have one request a day. Please don't hate me for existing or not knowing things I don't know. Thank you!
