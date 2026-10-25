@@ -12,8 +12,8 @@ I like Chrome's default new tab/homepage, but hate that it only works if you hav
 - Fast access to Google Services
 - Can use your Google account pfp instead of the placeholder so it looks more natural
 
-## Installation Guide ^-^
-I don't have the $5 needed to post it on Chrome Web Store, so this extension comes unpacked. Here is a guide in case you don't know how to install unpacked extensions!
+## Installation
+I don't have the $5 needed to post it on Chrome Web Store, so this extension comes unpacked. Here is a guide in case you don't know how to install unpacked extensions ^-^
 ### Step 1:
 Download the extension from "Releases" page on GitHub
 <img width="1280" height="720" alt="" src="https://github.com/user-attachments/assets/9fdd35dc-c7a6-4a22-b61d-6b9106f7b116" />
