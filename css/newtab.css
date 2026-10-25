@@ -37,7 +37,7 @@
   --sb-hint: #80868b;
   --sb-pill: #f0f4f9;
 
-  --font: "Google Sans Text", "Google Sans", Roboto, "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --font: /* "Google Sans Text", "Google Sans", Roboto, "Segoe UI", system-ui, -apple-system, Arial, */ sans-serif;
   --font-logo: "Google Sans", "Google Sans Display", "Segoe UI", Roboto, Arial, sans-serif;
 
   --elev-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px 1px rgb(0 0 0 / 0.15);
@@ -64,7 +64,7 @@ body {
 body {
   margin: 0;
   overflow: hidden;
-  font-family: var(--font);
+  font-family: sans-serif;
   background: var(--md-surface);
   color: var(--md-on-surface);
   opacity: 0;
@@ -116,7 +116,7 @@ body.has-image .shortcut-label {
 }
 body.has-image.text-dark .on-bg,
 body.has-image.text-dark .shortcut-label {
-  text-shadow: 0 1px 3px rgb(255 255 255 / 0.5);
+  /* text-shadow: 0 1px 3px rgb(255 255 255 / 0.5); */
 }
 
 /* ---------- Top bar ---------- */

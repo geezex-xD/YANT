@@ -6,13 +6,13 @@ export const ENGINES = {
     image: "https://lens.google.com/",
   },
   duckduckgo: {
-    name: "DuckDuckGo",
+    name: "duck duck go",
     search: "https://duckduckgo.com/?q=",
     home: "https://duckduckgo.com/",
     image: "https://lens.google.com/", // DuckDuckGo has no reverse image search; Lens is the closest match
   },
   bing: {
-    name: "Bing",
+    name: "bing",
     search: "https://www.bing.com/search?q=",
     home: "https://www.bing.com/",
     image: "https://www.bing.com/visualsearch",
