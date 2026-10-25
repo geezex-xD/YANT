@@ -18,7 +18,7 @@ I don't have the $5 needed to post it on Chrome Web Store, so this extension com
 Download the extension from "Releases" page on GitHub
 <img width="1280" height="720" alt="" src="https://github.com/user-attachments/assets/9fdd35dc-c7a6-4a22-b61d-6b9106f7b116" />
 <img width="1280" height="720" alt="" src="https://github.com/user-attachments/assets/fdc38467-ade5-41c3-8777-ac4f9efb3f07" />
-Or just click this button here -> [DOWNLOAD](https://github.com/geezex-xD/YANT/releases/download/1.0.0/YANT-1.zip)
+Or just click this button here -> [DOWNLOAD](https://github.com/geezex-xD/YANT/releases/download/1.0.1/YANT1.0.1.zip)
 ### Step 2:
 Unzip it. If you're on Windows 11, just select YANT.zip in the explorer and click "Extract all". If you're on Windows 10, select the archive, then click it with the right mouse button, then click "extract All..."
 On MacOS, right-click (or control-click) the .zip file, choose "Open With", then select "Archive Utility".
